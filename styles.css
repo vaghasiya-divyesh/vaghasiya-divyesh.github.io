@@ -10,3 +10,49 @@
 @media(max-width:580px){.idea-layout,.teaching-layout,.contact-layout{grid-template-columns:minmax(0,1fr)}.demo-symbols{gap:clamp(8px,3vw,18px)}.code-value{width:clamp(48px,16vw,68px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{@page{size:A4;margin:16mm 17mm}html{scroll-behavior:auto}body,.cv-page{background:white;color:#172f27;font-size:10pt;line-height:1.45}.site-header,.site-footer,.skip-link,.cv-toolbar,.nav-toggle,.no-print,[data-print]{display:none!important}.container,.cv-shell{width:100%;max-width:none;margin:0;padding:0}.cv-heading{padding-bottom:12px;margin-bottom:20px}.cv-heading h1{font-size:26pt}.cv-heading p{font-size:9pt;line-height:1.55}.cv-heading .eyebrow{font-size:7pt}.cv-section{margin-bottom:20px}.cv-section h2{font-size:15pt;padding-bottom:6px;margin-bottom:12px;break-after:avoid}.cv-section h3{font-size:10pt;break-after:avoid}.cv-section p,.cv-section li,.cv-body{font-size:9pt;line-height:1.55}.cv-entry{grid-template-columns:28mm 1fr;gap:6mm;margin-bottom:11px;break-inside:avoid}.cv-date{font-size:8pt}.cv-body p{margin-bottom:4px}.cv-section li{margin-bottom:8px;break-inside:avoid}.cv-section ul,.cv-section ol{padding-left:17px}a{color:inherit;text-decoration:none}details{display:block}h1,h2,h3{break-after:avoid}p{orphans:3;widows:3}.cv-page .publication{padding:12px 0;break-inside:avoid}.cv-page .publication h3{font-size:11pt}}
+
+/* Approved October 2026 update: fuller contact details, matching the original design. */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: inherit;
+  vertical-align: middle;
+}
+.project-list .project-meta {
+  margin-top: -3px;
+  font-size: .72rem;
+  color: var(--green);
+}
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+}
+.contact-email .icon { width: 23px; height: 23px; flex-basis: 23px; }
+.contact-email span { padding-left: 4px; }
+.secondary-email { display: flex; align-items: center; gap: 10px; }
+.secondary-email .icon { width: 17px; height: 17px; flex-basis: 17px; }
+.contact-office {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+  color: #d2ded7;
+  font-size: .75rem;
+  line-height: 1.9;
+  font-style: normal;
+}
+.contact-office > .icon { color: #d0c28f; margin-top: 3px; }
+.contact-office .small-label { display: block; color: #d0c28f; margin-bottom: 7px; }
+.contact-office strong { font-weight: 500; color: var(--paper); }
+.contact-links .profile-label { display: inline-flex; align-items: center; gap: 13px; }
+.contact-links .profile-label .icon { color: #d0c28f; }
+@media (max-width: 580px) {
+  .contact-email { font-size: clamp(1.05rem, 5.2vw, 1.55rem); gap: 8px; }
+  .contact-office { font-size: .8rem; }
+  .project-list .project-meta { font-size: .76rem; }
+}

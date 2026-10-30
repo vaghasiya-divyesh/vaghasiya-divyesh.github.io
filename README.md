@@ -1,26 +1,32 @@
-# Divyesh Vaghasiya — personal academic website
+# Divyesh Vaghasiya — academic website
 
-A responsive, static website for GitHub Pages. No installation or build step.
+Personal academic website, built with HTML, CSS, and JavaScript and hosted on GitHub Pages. No installation or build step is required.
 
-## Publish
+- [Website](https://vaghasiya-divyesh.github.io/)
+- [Public CV](https://vaghasiya-divyesh.github.io/cv.html)
+- [CV PDF](https://vaghasiya-divyesh.github.io/assets/Divyesh-Vaghasiya-CV.pdf)
+- [Repository](https://github.com/vaghasiya-divyesh/vaghasiya-divyesh.github.io)
 
-Create a public GitHub repository called `YOURUSERNAME.github.io`, using your actual username. Upload the contents of this folder to its root, including `.nojekyll`. Do not upload the ZIP itself or an enclosing folder. In **Settings → Pages**, choose **Deploy from a branch → main → /(root) → Save**. Your site will be at `https://YOURUSERNAME.github.io/`.
+## Files
 
-## Edit
+| File | Purpose |
+| --- | --- |
+| `index.html` | Introduction, research, papers, teaching, talks, and contact information |
+| `cv.html` | Public CV for reading online |
+| `styles.css` | Typography, colors, responsive layout, and CV styling |
+| `site.js` | Navigation, publication filters, and interactive research example |
+| `assets/Divyesh-Vaghasiya-CV.pdf` | Supplied CV PDF, provided unchanged |
+| `assets/photo.jpg` | Portrait |
+| `assets/icons.svg` | Reusable interface icons |
+| Other `assets/*.svg` | Research diagrams and favicon |
+| `.nojekyll` | Serves the prepared static website without Jekyll processing |
 
-- `index.html`: introduction, research, papers, teaching, talks, and contact.
-- `cv.html`: public curriculum vitae. The Print / save PDF button opens your browser's print dialog. Choose Save as PDF. Replace this with a downloadable final CV PDF later if preferred.
-- `styles.css`: colors, type, responsive layouts, and print formatting.
-- `site.js`: mobile navigation, paper filters, print button, and the local-recovery example.
-- `assets/photo.jpg`: portrait from a previously supplied photo; replace with a newer headshot using the same name if desired.
-- `assets/*.svg`: original schematic research illustrations and favicon.
+The **Download CV** link points directly to the supplied PDF. Browser settings determine whether it downloads immediately, asks for a save location, or opens in a PDF viewer. The HTML CV is a separate public reading version; keep it synchronized with the master CV and PDF.
 
-Both pages work as local HTML files, so double-click `index.html` to inspect before uploading. Research text and links remain accessible without JavaScript.
+The research diagrams are illustrative schematics. The local-recovery demonstration uses the elementary parity code `a + b + c = 0 (mod 5)` and is not presented as a construction from a paper.
 
-The research diagrams are illustrative schematics. The interactive example is the elementary parity code `a + b + c = 0 (mod 5)`; it is not presented as a construction from a paper.
+## Updates
 
-The current public CV omits referee contacts and the street address. Keep it synchronized with your master academic CV. Current research and teaching records are based on the supplied October 27, 2026 CV and recent discussions. Do not upload private application materials or conversation notes to this repository.
+GitHub Pages publishes the `main` branch from the repository root. Update files at their existing paths, keeping assets inside `assets/`. The Pages deployment appears in the repository's **Actions** tab.
 
-Google Scholar has been omitted because the supplied CV used an unfinished profile URL. Add the genuine profile link when available. LinkedIn uses the link in the supplied CV.
-
-For an optional domain name later, follow [GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages). No `CNAME` file is included before you own and configure a domain.
+Private application drafts, conversation exports, referee correspondence, and working notes are not part of this website packet. Keep those materials outside the public repository.

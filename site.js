@@ -16,10 +16,6 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
     document.addEventListener('click', e => { if (!e.target.closest('.site-header')) closeMenu(); });
   }
-  document.querySelectorAll('[data-print]').forEach(button => {
-    button.hidden = false;
-    button.addEventListener('click', () => window.print());
-  });
   const filters = document.querySelector('.publication-filters');
   const papers = [...document.querySelectorAll('[data-publication]')];
   const applyFilter = filter => {
@@ -34,6 +30,12 @@
     filters.addEventListener('click', e => { const b = e.target.closest('[data-filter]'); if (b) applyFilter(b.dataset.filter); });
     // A research link must still reveal its paper after a visitor has selected another filter.
     const revealTarget = () => { if (papers.some(p => `#${p.id}` === window.location.hash)) applyFilter('all'); };
+    // Reveal a filtered paper before the browser follows an internal link to it.
+    // This also handles a link to the hash that is already in the address bar.
+    document.addEventListener('click', e => {
+      const link = e.target.closest('a[href^="#paper-"]');
+      if (link && papers.some(p => `#${p.id}` === link.getAttribute('href'))) applyFilter('all');
+    });
     window.addEventListener('hashchange', revealTarget);
     revealTarget();
   }
