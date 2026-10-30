@@ -68,8 +68,11 @@
   vertical-align: middle;
   margin: 0 8px 2px 0;
 }
-.institution-logo-usf { background: #fff; border-radius: 2px; }
-.institution-logo-iit-bombay { background: #fff; border-radius: 2px; }
+.institution-logo-usf, .institution-logo-iit-bombay, .institution-logo-duke {
+  background: transparent;
+  filter: url("#remove-white");
+}
+
 .institution-logo-duke { height: 32px; max-width: 115px; }
 .institution-logo-cimat { height: 36px; }
 .institution-logo-ruia { height: 36px; }
@@ -78,15 +81,15 @@
 .affiliation-inner .institution-logo { flex: 0 0 auto; height: 48px; max-width: 116px; margin: 0; }
 .affiliation-inner .affiliation-copy { min-width: 0; }
 .affiliation-inner .institution-logo-ruia { height: 54px; }
-.contact-office .institution-logo { background: var(--paper); padding: 4px; border-radius: 2px; }
-.contact-office .institution-logo-usf { background: #fff; padding: 2px; }
+
+
 .office-search { color: inherit; text-decoration: none; display: inline-block; }
 .office-search:hover { text-decoration: underline; text-decoration-color: #d0c28f; }
 .office-search > span { color: #d0c28f; }
-.profile-logo-tile { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 32px; width: 32px; height: 34px; padding: 5px; border-radius: 2px; background: var(--paper); }
-.arxiv-logo { display: block; width: 18px; height: 25px; object-fit: contain; }
+
+
 .contact-links .profile-label > .institution-logo { margin: 0; }
-.contact-links .institution-logo-usf { padding: 2px; width: 32px; height: 34px; object-fit: contain; }
+.contact-links .institution-logo-usf { padding: 0; width: 24px; height: 24px; object-fit: contain; }
 @media (max-width: 1050px) {
   .affiliation-inner { gap: 18px; }
   .affiliation-inner > a { gap: 9px; }
@@ -104,3 +107,5 @@
   .institution-logo { height: 25px; max-width: 78px; margin-right: 6px; }
   .institution-logo-ruia { height: 32px; }
 }
+
+.logo-filters { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
